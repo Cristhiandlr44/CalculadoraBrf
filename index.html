@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Jornada de Trabalho</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Jornada de Trabalho</h1>
+
+    <form id="workForm">
+      <div class="form-group">
+        <label for="startExpectedDate">Início Previsto - Data:</label>
+        <input type="date" id="startExpectedDate" required>
+      </div>
+
+      <div class="form-group">
+        <label for="startExpectedTime">Início Previsto - Hora:</label>
+        <input type="time" id="startExpectedTime" value="07:00" required>
+      </div>
+
+      <div class="form-group">
+        <label for="endExpectedDate">Fim Previsto - Data:</label>
+        <input type="date" id="endExpectedDate" required>
+      </div>
+
+      <div class="form-group">
+        <label for="endExpectedTime">Fim Previsto - Hora:</label>
+        <input type="time" id="endExpectedTime" required>
+      </div>
+
+      <div class="form-group">
+        <label for="startRealizedDate">Início Realizado - Data:</label>
+        <input type="date" id="startRealizedDate" required>
+      </div>
+
+      <div class="form-group">
+        <label for="startRealizedTime">Início Realizado - Hora:</label>
+        <input type="time" id="startRealizedTime" required>
+      </div>
+
+      <div class="form-group">
+        <label for="mealHours">Refeição Apontada (Horas):</label>
+        <input type="number" id="mealHours" min="0" max="23" value="0" placeholder="00" required>
+      </div>
+
+      <div class="form-group">
+        <label for="mealMinutes">Refeição Apontada (Minutos):</label>
+        <input type="number" id="mealMinutes" min="0" max="59" value="0" placeholder="00" required>
+      </div>
+
+      <div class="form-group">
+        <label for="overnightHours">Pernoite Apontada (Horas):</label>
+        <input type="number" id="overnightHours" min="0" max="23" value="0" placeholder="00" required>
+      </div>
+
+      <div class="form-group">
+        <label for="overnightMinutes">Pernoite Apontada (Minutos):</label>
+        <input type="number" id="overnightMinutes" min="0" max="59" value="0" placeholder="00" required>
+      </div>
+
+      <button type="button" id="calculateBtn">Calcular</button>
+    </form>
+
+    <div id="results" class="results">
+      <p><strong>Lead:</strong> <span id="leadResult"></span></p>
+      <p><strong>Pernoite:</strong> <span id="pernoiteResult"></span></p>
+      <p><strong>Refeição:</strong> <span id="refeicaoResult"></span></p>
+      <p><strong>Jornada:</strong> <span id="jornadaResult"></span></p>
+      <p><strong>Hora Fim Mínimo:</strong> <span id="horaFimMinimoResult"></span></p>
+      <p><strong>Hora Fim Máximo:</strong> <span id="horaFimMaximoResult"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
